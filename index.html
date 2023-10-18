@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tshepo Maseeme">
+    <meta name="description" content='Based in Tuscon, Arizona, Lucky Shrub is a medium-sized garden design firm that specializes in garden design and creation, maintenance and landscaping. The company also runs a small plant nursery that sells indoor and outdoor plants, making them a one-stop shop for clients to "transform any space into an oasis you can be proud of".'>
+    <title>Luck Shrub Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header-section">
+        <header>
+            <div id="logo">
+                <a href="#"><img src="Lucky-Shrub-logos/Asset1.png" alt="Logo Here" id="logo-pic"></a>
+            </div>
+            <div id="navbar">
+
+
+                <button class="mobile-nav-toggle" aria-expanded="false"></button>
+                <nav >
+                    <ul class="primary-navigation" data-visible="false">
+                        <a href="#" id="home"><li>Home</li></a>
+                        <a href="#" id="Products"><li>Products</li></a>
+                        <a href="#" id="Contact"><li>Contact</li></a>
+                        <a href="#" id="Info"><li>Info</li></a>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+
+    <section id="main-section">
+        <main>
+            <div id="first">
+                <h1>Promotional Offer</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis auctor elit sed vulputate. Massa massa ultricies mi quis hendrerit dolor magna eget est. Purus in massa tempor nec.</p>
+                <button id="shop-button"><a href="#">Shop Now</a></button>
+            </div>
+            <div id="second" class="content">
+                <h1>Indoor Plants</h1>
+                <img src="Lucky-Shrub-logos/Asset 3@3x.png" alt="Product Here" id="product">
+                <button id="shop-button"><a href="#">Shop Now</a></button>
+            </div>
+            <div id="third" class="content">
+                <h1>Outdoor Plants</h1>
+                <img src="Lucky-Shrub-logos/Asset 3@3x.png" alt="Product Here" id="product">
+                <button id="shop-button"><a href="#">Shop Now</a></button>
+            </div>
+            <div id="fourth" class="content">
+                <h1>Garden Designs</h1>
+                <img src="Lucky-Shrub-logos/Asset 3@3x.png" alt="Product Here" id="product">
+                <button id="shop-button"><a href="#">Shop Now</a></button>
+            </div>
+        </main>
+    </section>
+
+    <section id="footer-section">
+        <footer>
+            <div id="logo">
+                <img src="Lucky-Shrub-logos/Asset 2@3x.png" alt="Logo Here" id="logo-pic">
+            </div>
+            <div id="Copyright">
+                <p>Copyright Lucky Shrub</p>
+            </div>
+        </footer>
+    </section>
+
+    <script>
+        const primaryNav = document.querySelector('.primary-navigation');
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+
+        navToggle.addEventListener('click', () => {
+            
+            const visibility = primaryNav.getAttribute('data-visible');
+
+            console.log(visibility)
+            if(visibility === 'false'){
+                primaryNav.setAttribute('data-visible', true);
+                navToggle.setAttribute('aria-expanded', true);
+            } else{
+                primaryNav.setAttribute('data-visible', false);
+                navToggle.setAttribute('aria-expanded', false);
+            }
+        });
+
+    </script>
+</body>
+</html>
